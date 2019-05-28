@@ -8,11 +8,8 @@ RUN pip install tensorflow
 # Downloads training data
 #RUN curl https://example-url/path-to-data/data-filename --output /root/data-filename
 
-RUN git clone https://github.com/ronschneider/dots.git
-RUN ls /home
-
 # Copies the trainer code to the docker image.
-#COPY ../*.py /root/
+COPY dots_copy/ /home/dots/
 #COPY ../*.ipynb /root/
 
 # Sets up the entry point to invoke the trainer.
